@@ -1,0 +1,16 @@
+<div class="flex">
+	<div>
+	<% @json_hash.each do |user| %>
+			<p>
+				<strong><%= user['first_name']%> <%= user['last_name']%></strong>
+			</p>
+			<p><%= user['email']%></p>
+			<img src="<%= user['avatar']%>">
+			<p><a href="/user/show/<%= user['id']%>">Show details</a></p>
+	<% end %>
+	<% if @json_hash.empty? then %> 
+		<p>There is no information.</p>
+	<% end%>
+	<p><%= link_to "Back to users", root_url %></p>
+	</div>
+</div>

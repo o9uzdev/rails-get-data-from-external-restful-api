@@ -13,3 +13,97 @@
  *= require_tree .
  *= require_self
  */
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex>div {
+    margin: 0 1rem 2rem 1rem;
+    text-align: center;
+}
+
+.flex>h3 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 6px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+input[type=text] {
+    width: 20%;
+    padding: 4px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+strong,
+b {
+    font-weight: bold;
+}
+
+p>a:link {
+    color: black;
+    text-decoration: none;
+}
+
+p>a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+p>a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+p>a:active {
+    color: black;
+    text-decoration: none;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}

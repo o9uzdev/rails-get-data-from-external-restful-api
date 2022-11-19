@@ -1,0 +1,28 @@
+<form action="/user/search" method="get">
+	<label>Search for email:</label>
+	<input type="text" name="query">
+	<input type="hidden" name="page" value="<%= @json_hash['page']%>">
+	<button>Search</button>
+</form>
+
+<div class="flex">
+	<% @json_hash['data'].each do |user| %>
+		<div>
+			<p>
+				<strong><%= user['first_name']%> <%= user['last_name']%></strong>
+			</p>
+			<p><%= user['email']%></p>
+			<img src="<%= user['avatar']%>">
+			<p><a href="/user/show/<%= user['id']%>">Show details</a></p>
+		</div>
+	<% end %>
+
+</div>
+
+<div class="pagination">
+	<a href="1">&laquo;</a>
+	<% for page in 1..@json_hash['total_pages'] do %>     
+	<a <% if @json_hash['page']==page then %>class="active"<% end %> href="<%= page %>"><%= page %></a>
+	<% end %>
+  	<a href="<%= @json_hash['total_pages'] %>">&raquo;</a>
+</div>

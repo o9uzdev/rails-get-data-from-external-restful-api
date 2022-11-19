@@ -1,0 +1,11 @@
+<div class="flex">
+	<div>
+		<p>
+			<strong><%= @json_hash['first_name']%> <%= @json_hash['last_name']%></strong>
+		</p>
+		<p><%= @json_hash['email']%></p>
+		<img src="<%= @json_hash['avatar']%>">
+		<p><%= link_to "Back to users", root_url %></p>
+	</div>
+</div>
+

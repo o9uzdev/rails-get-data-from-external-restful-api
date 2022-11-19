@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/user/index/:page', to:'user#index', defaults: { page: '1'}
+  get '/user/show/:id', to: 'user#show'
+  get '/user/search', to:'user#search'
+  root to: redirect(path: '/user/index/1')  
 end
